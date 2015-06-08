@@ -32,7 +32,11 @@ Sidebar Plugin to easy customize and display your date and time of multiple time
 * Initial release.
 
 == Screenshots ==
-1. screenshots
+
+1. /assets/screenshot-1.png
+2. /assets/screenshot-2.png
+3. /assets/screenshot-3.png
+4. /assets/screenshot-4.png
 
 == Changelog ==
 = 1.0.0 =
