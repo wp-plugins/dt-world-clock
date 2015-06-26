@@ -1,6 +1,6 @@
 === DT World Clock ===
 Contributors: Deligence Technologies
-Tags: clock, world clock, widget, worldclock, dt world clock, date, time, time peace
+Tags: clock, world clock, widget, worldclock, dtworldclock, date, time, timepeace
 Donate link: http://example.com/
 Requires at least: 3.0.0
 Tested up to: 4.2.2
