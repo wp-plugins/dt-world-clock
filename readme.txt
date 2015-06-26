@@ -8,11 +8,11 @@ Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Sidebar Plugin to easy customize and display your date and time of multiple timezones. All settings are available from Sidebar Widget Admin.
+A Plugin that can be easily set to display date and time of multiple timezones. Supports date and time formatting
 
 == Description ==
 
-A Plugin that can be easily set to display date and time of multiple timezones. Supports date and time formatting
+A Plugin with easy customization to display date and time of multiple timezones. All settings are available from Admin menu.
 
 == Installation ==
 
