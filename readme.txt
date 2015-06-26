@@ -8,6 +8,7 @@ Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+
 A Plugin that can be easily set to display date and time of multiple timezones. Supports date and time formatting
 
 == Description ==
