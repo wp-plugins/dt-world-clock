@@ -1,6 +1,5 @@
 <?php defined( 'ABSPATH' ) or die( 'No script kiddies please!' ); ?>
-<?php global $date_formats;
-	$date_formats=array("%Y-%m-%d"=>"YYYY-MM-DD","%d-%m-%Y"=>"DD-MM-YYYY","%m-%d-%Y"=>"MM-DD-YYYY"); ?>
+
 
 <div style="width: 500px; margin: 0 auto; padding: 50px 0 40px;">
         <ul class="tabs" data-persist="true">
