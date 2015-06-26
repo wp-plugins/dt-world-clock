@@ -2,9 +2,9 @@
 
 
 
-#dt_form select
+#dt_form select,input[type=text]
 {
-	width:150px;
+	width:95%;
 }
 
 ul.tabs
