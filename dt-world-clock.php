@@ -5,7 +5,7 @@
 		Plugin URI: http://www.deligence.com 
 		Author: Deligence Technologies
 		Author URI: http://www.deligence.com 
-		Version: 1.2.0
+		Version: 1.1.0
 		Description: its a plugin to show world clocks
 	*/
 	

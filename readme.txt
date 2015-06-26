@@ -1,5 +1,5 @@
 === DT World Clock ===
-Contributors: user, user, user
+Contributors: Deligence Technologies
 Tags: clock, world clock, widget, worldclock, dt world clock, date, time
 Donate link: http://example.com/
 Requires at least: 3.0.0
@@ -32,13 +32,15 @@ A Plugin that can be easily set to display date and time of multiple timezones. 
 * Initial release.
 
 == Screenshots ==
-1. setting-1.png (show general settings for clock)
-2. setting-2.png (show advanced settings for clock)
-3. setting-3.png (show clock on front)
+1. setting-1.png (show clock on front)
+2. setting-2.png (show general settings for clock)
+3. setting-3.png (show advanced settings for clock)
+4. setting-4.png (place it on any widget )
+5. setting-5.png (show clock on front)
 
 == Changelog ==
 
-= V1.2.0 - 26.06.2015 =
+= V1.1.0 - 26.06.2015 =
 
 update : Added a new feature to display text on front with clock
 
@@ -50,7 +52,7 @@ Bugfix : Clock was not daylight saving, showing time 1 hour late
 
 == Upgrade Notice ==
 
-= V1.2.0 =
+= V1.1.0 =
 
 Bugs fixed.
 
