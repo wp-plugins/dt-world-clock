@@ -32,11 +32,11 @@ A Plugin that can be easily set to display date and time of multiple timezones. 
 * Initial release.
 
 == Screenshots ==
-1. setting-1.png (show clock on front)
-2. setting-2.png (show general settings for clock)
-3. setting-3.png (show advanced settings for clock)
-4. setting-4.png (place it on any widget )
-5. setting-5.png (show clock on front)
+1. screenshot-1.png (show clock on front)
+2. screenshot-2.png (show general settings for clock)
+3. screenshot-3.png (show advanced settings for clock)
+4. screenshot-4.png (place it on any widget )
+5. screenshot-5.png (show clock on front)
 
 == Changelog ==
 
