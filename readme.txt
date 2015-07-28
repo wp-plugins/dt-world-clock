@@ -25,8 +25,8 @@ A Plugin with easy customization to display date and time of multiple timezones.
 6. After installation process click on activate plugin
 7. It will create menu DTW Clock at admin menu
 8. Click and manage settings as per requirements(As shown in setting-1.png,setting-2.png)
-9. Now to show the DTW Clock go to Appearance then choose Widgets  
-10. Find the DT Wold Clock widget and place it any where in you theme widget area to show clock (As shown in setting-3.png).
+9. Now to show the DTW Clock go to Appearance then choose Widgets from admin menu 
+10. Find the DT Wold Clock widget and place it any where in your theme widget area to show clock (As shown in setting-3.png).
   
 
 == Frequently Asked Questions ==
@@ -36,10 +36,15 @@ A Plugin with easy customization to display date and time of multiple timezones.
 1. screenshot-1.png (show clock on front)
 2. screenshot-2.png (show general settings for clock)
 3. screenshot-3.png (show advanced settings for clock)
-4. screenshot-4.png (place it on any widget )
-5. screenshot-5.png (show clock on front, depends on theme)
+4. screenshot-4.png (place it on any widget of your theme)
+5. screenshot-5.png (show clock on front, apperance will depends on theme style)
 
 == Changelog ==
+
+= V1.2.0 - 28.07.2015 =
+
+update : Added date formats
+update : Added date separator feature
 
 = V1.1.0 - 26.06.2015 =
 

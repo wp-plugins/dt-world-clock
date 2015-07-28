@@ -11,7 +11,7 @@
 <?php settings_fields( 'dt_settings_group' ); ?>
         <div class="tabcontents">
             <div id="view1">
-                
+               
 <h4>DT World Clock Settings</h4>
 <table>
 <tr><td>Choose Time Format</td><td><select name="dt_format">
@@ -47,6 +47,22 @@
 	<option value="<?php echo $key; ?>" <?php if($key==get_option( 'dt_date' )){?> selected <?php }?>><?php echo $format; ?></option>
 <?php } ?>
 </select></td></tr>
+<tr>
+<td>
+Date Separator
+</td>
+<td>
+<select name="dt_date_separator">
+<option value="-" <?php if(get_option( 'dt_date_separator' )=="-"){ ?> selected <?php }?>>-</option>
+<option value="/" <?php if(get_option( 'dt_date_separator' )=="/"){ ?> selected <?php }?>>/</option>
+<option value=":" <?php if(get_option( 'dt_date_separator' )==":"){ ?> selected <?php }?>>:</option>
+<option value="\\" <?php if(get_option( 'dt_date_separator' )=="\\\\"){ ?> selected <?php }?>>\</option>
+<option value="|" <?php if(get_option( 'dt_date_separator' )=="|"){ ?> selected <?php }?>>|</option>
+<option value="space" <?php if(get_option( 'dt_date_separator' )=="space"){ ?> selected <?php }?>>space</option>
+</select>
+</td>
+
+</tr>
 </table>
 
 

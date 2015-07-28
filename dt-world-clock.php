@@ -1,11 +1,11 @@
-<?php
+  <?php
 	defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	/*
 		Plugin Name: DT World Clock
 		Plugin URI: http://www.deligence.com 
 		Author: Deligence Technologies
 		Author URI: http://www.deligence.com 
-		Version: 1.1.0
+		Version: 1.2.0
 		Description: its a plugin to show world clocks
 	*/
 	
@@ -23,7 +23,7 @@
 	Foundation, Inc.,
 	*/	
 	global $date_formats;
-	$date_formats=array("%Y-%m-%d"=>"YYYY-MM-DD","%d-%m-%Y"=>"DD-MM-YYYY","%m-%d-%Y"=>"MM-DD-YYYY");
+	$date_formats=array("YYYY-MM-DD"=>"YYYY-MM-DD","DD-MM-YYYY"=>"DD-MM-YYYY","MM-DD-YYYY"=>"MM-DD-YYYY","MMM-DD-YYYY"=>"Jul-11-2002","DD-MMM-YYYY"=>"11-Jul-2002","MMMM-DD-YYYY"=>"July-11-2002","DD-MMMM-YYYY"=>"11-July-2002");
 	
 	/* to register plugin */
 	function dt_register()
@@ -34,21 +34,26 @@
 	
 	function dt_uninstall()
 	{
-		delete_option('dt_format' );
-		delete_option('dt_layout' );		
-		delete_option('dt_settings_group', 'dt_align'  );
-		delete_option('dt_settings_group', 'dt_sec'    );
-		delete_option('dt_zeros'  );
-		delete_option('dt_date'   );
+		delete_option('dt_format');
+		delete_option('dt_layout');		
+		delete_option('dt_align');
+		delete_option('dt_sec');
+		delete_option('dt_zeros');
+		delete_option('dt_date');
+		delete_option('dt_date_separator');
 		/*------------------Advance------------------------*/
 		delete_option('dt_clock1_show');
 		delete_option('dt_clock1_timezone');
+		delete_option('dt_clock1_text');
 		delete_option('dt_clock2_show');
 		delete_option('dt_clock2_timezone');
+		delete_option('dt_clock2_text');
 		delete_option('dt_clock3_show');
 		delete_option('dt_clock3_timezone');
+		delete_option('dt_clock3_text');
 		delete_option('dt_clock4_show');
 		delete_option('dt_clock4_timezone');
+		delete_option('dt_clock4_text');
 	}
 	
 	register_uninstall_hook( __FILE__ ,'dt_uninstall');
@@ -78,6 +83,7 @@
 		register_setting( 'dt_settings_group', 'dt_sec'    );
 		register_setting( 'dt_settings_group', 'dt_zeros'  );
 		register_setting( 'dt_settings_group', 'dt_date'   );
+		register_setting( 'dt_settings_group', 'dt_date_separator');
 		/*------------------Advance------------------------*/
 		for($i=1;$i<=4;$i++)
 		{
@@ -110,6 +116,8 @@
 			$sec=get_option( 'dt_sec' );
 			$zeros=get_option( 'dt_zeros' );
 			$date=get_option( 'dt_date' );
+			$separator=get_option( 'dt_date_separator' )=="space" ? " " : get_option( 'dt_date_separator' );
+			
 			$clock1_show=get_option( 'dt_clock1_show' );
 			$clock2_show=get_option( 'dt_clock2_show' );
 			$clock3_show=get_option( 'dt_clock3_show' );
@@ -240,7 +248,7 @@
 				function DisplayTime(span_id,timezone)
 				{
 					id=span_id.split("_");
-					var now=moment.tz(timezone).format("<?php echo $date_formats[$date];?>");
+					var now=moment.tz(timezone).format("<?php echo $date;?>");
 					
 					var time=null;
 					<?php if($format==1){?>
@@ -281,10 +289,14 @@
 						<?php } ?>
 					<?php }?>
 					
-					dnt=now.split(new RegExp('[-+T]','g'));
-					console.log(dnt);
+					//dnt=now.split(new RegExp('[-+T]','g'));
+					
+					dnt=now.replace(/-/,"<?php echo $separator ?>");
+					dnt=dnt.replace(/-/,"<?php echo $separator ?>");
+					//console.log(dnt);
 					document.getElementById(span_id).innerHTML=time;
-					document.getElementById("date_"+id[1]).innerHTML=dnt[0]+'-'+dnt[1]+'-'+dnt[2];
+					//document.getElementById("date_"+id[1]).innerHTML=dnt[0]+'-'+dnt[1]+'-'+dnt[2];
+					document.getElementById("date_"+id[1]).innerHTML=dnt;
 				}
 				
 				
