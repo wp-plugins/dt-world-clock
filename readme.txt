@@ -44,11 +44,13 @@ A Plugin with easy customization to display date and time of multiple timezones.
 = V1.3.0 - 27.08.2015 =
 
 update : Added day of the week feature
+
 Bugfix : removed whitespace before first php tag
 
 = V1.2.0 - 28.07.2015 =
 
 update : Added date formats
+
 update : Added date separator feature
 
 = V1.1.0 - 26.06.2015 =
