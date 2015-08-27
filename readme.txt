@@ -3,7 +3,7 @@ Contributors: Deligence Technologies
 Tags: clock, world clock, widget, worldclock, dtworldclock, date, time, timepeace
 Donate link: http://example.com/
 Requires at least: 3.0.0
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,16 +30,21 @@ A Plugin with easy customization to display date and time of multiple timezones.
   
 
 == Frequently Asked Questions ==
-* Initial release.
+* FAQs Not Yet.
 
 == Screenshots ==
-1. screenshot-1.png (show clock on front)
-2. screenshot-2.png (show general settings for clock)
-3. screenshot-3.png (show advanced settings for clock)
-4. screenshot-4.png (place it on any widget of your theme)
-5. screenshot-5.png (show clock on front, apperance will depends on theme style)
+1. screenshot-1.png (Clock on front)
+2. screenshot-2.png (General settings for clock)
+3. screenshot-3.png (Advanced settings for clock)
+4. screenshot-4.png (Place it on any widget of your theme)
+5. screenshot-5.png (Clock on front, apperance will depends on theme style)
 
 == Changelog ==
+
+= V1.3.0 - 27.08.2015 =
+
+update : Added day of the week feature
+Bugfix : removed whitespace before first php tag
 
 = V1.2.0 - 28.07.2015 =
 

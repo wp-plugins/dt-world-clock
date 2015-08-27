@@ -1,15 +1,15 @@
-  <?php
+<?php
 	defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	/*
 		Plugin Name: DT World Clock
 		Plugin URI: http://www.deligence.com 
 		Author: Deligence Technologies
 		Author URI: http://www.deligence.com 
-		Version: 1.2.0
+		Version: 1.3.0
 		Description: its a plugin to show world clocks
 	*/
 	
-	/* Copyright 2015-16 Deligence Technologies (email : saurabh@deligence.com)
+	/* Copyright 2015-16 Deligence Technologies (email : sanjay@deligence.com)
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License as
 	published by the Free Software Foundation; either version 2
@@ -41,19 +41,14 @@
 		delete_option('dt_zeros');
 		delete_option('dt_date');
 		delete_option('dt_date_separator');
+		delete_option('dt_week_day');
 		/*------------------Advance------------------------*/
-		delete_option('dt_clock1_show');
-		delete_option('dt_clock1_timezone');
-		delete_option('dt_clock1_text');
-		delete_option('dt_clock2_show');
-		delete_option('dt_clock2_timezone');
-		delete_option('dt_clock2_text');
-		delete_option('dt_clock3_show');
-		delete_option('dt_clock3_timezone');
-		delete_option('dt_clock3_text');
-		delete_option('dt_clock4_show');
-		delete_option('dt_clock4_timezone');
-		delete_option('dt_clock4_text');
+		for($i=1;$i<=4;$i++)
+		{
+			delete_option('dt_clock'.$i.'_show');
+			delete_option('dt_clock'.$i.'_timezone');
+			delete_option('dt_clock'.$i.'_text');
+		}
 	}
 	
 	register_uninstall_hook( __FILE__ ,'dt_uninstall');
@@ -84,6 +79,7 @@
 		register_setting( 'dt_settings_group', 'dt_zeros'  );
 		register_setting( 'dt_settings_group', 'dt_date'   );
 		register_setting( 'dt_settings_group', 'dt_date_separator');
+		register_setting( 'dt_settings_group', 'dt_week_day');
 		/*------------------Advance------------------------*/
 		for($i=1;$i<=4;$i++)
 		{
@@ -116,12 +112,12 @@
 			$sec=get_option( 'dt_sec' );
 			$zeros=get_option( 'dt_zeros' );
 			$date=get_option( 'dt_date' );
-			$separator=get_option( 'dt_date_separator' )=="space" ? " " : get_option( 'dt_date_separator' );
-			
+			$separator=get_option( 'dt_date_separator' )=="space" ? " " : get_option( 'dt_date_separator' );			
 			$clock1_show=get_option( 'dt_clock1_show' );
 			$clock2_show=get_option( 'dt_clock2_show' );
 			$clock3_show=get_option( 'dt_clock3_show' );
 			$clock4_show=get_option( 'dt_clock4_show' );
+			$weekday=get_option( 'dt_week_day' );
 			
 			global $date_formats;
 			$title = apply_filters('widget_title', $instance['title']);		
@@ -248,8 +244,8 @@
 				function DisplayTime(span_id,timezone)
 				{
 					id=span_id.split("_");
-					var now=moment.tz(timezone).format("<?php echo $date;?>");
-					
+					var now=moment.tz(timezone).format("<?php if($weekday){ ?>dddd, <?php } ?><?php echo $date;?>");
+					//alert(now);
 					var time=null;
 					<?php if($format==1){?>
 						time=moment.tz(timezone).format("HH:mm:ss");
